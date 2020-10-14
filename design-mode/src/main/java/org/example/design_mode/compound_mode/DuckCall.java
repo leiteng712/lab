@@ -1,19 +1,14 @@
-package org.example.design_mode.rmi.compound_model;
+package org.example.design_mode.compound_mode;
 
 /**
  * @author: leiteng
- * @date: 2020/10/11 16:59
- * <p>
- * 适配器模式
+ * @date: 2020/10/11 16:52
  */
-public class GooseAdapter implements Quackable {
+public class DuckCall implements Quackable {
 
     Observable observable;
 
-    Goose goose;
-
-    public GooseAdapter(Goose goose) {
-        this.goose = goose;
+    public DuckCall() {
         this.observable = new Observable(this);
     }
 
@@ -29,7 +24,7 @@ public class GooseAdapter implements Quackable {
 
     @Override
     public void quack() {
-        goose.honk();
+        System.out.println("Kwaw");
         notifyObservers();
     }
 }

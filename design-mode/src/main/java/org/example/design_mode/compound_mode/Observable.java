@@ -1,4 +1,4 @@
-package org.example.design_mode.rmi.compound_model;
+package org.example.design_mode.compound_mode;
 
 import java.util.ArrayList;
 import java.util.Iterator;

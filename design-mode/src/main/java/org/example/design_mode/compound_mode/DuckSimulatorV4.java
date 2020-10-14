@@ -1,13 +1,13 @@
-package org.example.design_mode.rmi.compound_model;
+package org.example.design_mode.compound_mode;
 
 /**
  * @author: leiteng
  * @date: 2020/10/11 16:54
  */
-public class DuckSimulatorV2 {
+public class DuckSimulatorV4 {
 
     public static void main(String[] args) {
-        DuckSimulatorV2 duckSimulator = new DuckSimulatorV2();
+        DuckSimulatorV4 duckSimulator = new DuckSimulatorV4();
         duckSimulator.simulate(new CountingDuckFactory());
     }
 
@@ -24,11 +24,14 @@ public class DuckSimulatorV2 {
         Quackable duckCall = factory.createDuckCall();
         Quackable gooseDuck = new QuackCounter(new GooseAdapter(new Goose()));
 
-        System.out.println("Duck Simulator");
+        Flock flock = new Flock();
+        flock.add(mallardDuck);
+        flock.add(duckCall);
+        flock.add(gooseDuck);
 
-        simulate(mallardDuck);
-        simulate(duckCall);
-        simulate(gooseDuck);
+        Quackologist quackologist = new Quackologist();
+        flock.registerObserver(quackologist);
+        simulate(flock);
 
         System.out.println("The ducks quacked " + QuackCounter.getNumberOfQuacks() + " times");
     }
