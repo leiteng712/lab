@@ -1,4 +1,4 @@
-package com.light.classloader;
+package com.example.jvm.classloader;
 
 import sun.misc.Launcher;
 import sun.security.ec.point.Point;

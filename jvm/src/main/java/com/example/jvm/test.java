@@ -1,4 +1,4 @@
-package com.light;
+package com.example.jvm;
 
 public class test {
     public static void main(String[] args) {

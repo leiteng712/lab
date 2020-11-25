@@ -1,4 +1,4 @@
-package com.light;
+package com.example.jvm.clinit;
 
 /**
  *  * 3.JVM必须保证一个类的<clinit>方法在多线程下被同步加锁

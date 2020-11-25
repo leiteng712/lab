@@ -1,4 +1,4 @@
-package com.light.classloader;
+package com.example.jvm.classloader;
 
 public class ClassLoaderTest {
     public static void main(String[] args) {

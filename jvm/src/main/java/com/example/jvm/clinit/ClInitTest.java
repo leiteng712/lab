@@ -1,4 +1,4 @@
-package com.light;
+package com.example.jvm.clinit;
 
 /**
  * 1.<clinit>方法是javac编译器自动收集类中的
